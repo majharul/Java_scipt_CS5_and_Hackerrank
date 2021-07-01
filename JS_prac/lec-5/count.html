@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- <link rel="stylesheet" href="css/button.css" type="text/css"> -->
+
+        <title>Basic Counter after Click</title>
+        <script>
+            // let c=0
+            // function count(){
+            //     // let c
+            //     c=c+1;
+            //     // alert(`"count ${c}"`)
+            //     document.querySelector('#btn').innerHTML=c+1;
+            //     return c;
+            // }
+            let ar=[1,2,3,4,5]
+            // let ar2= [];
+            let ar2= [];
+            ar.forEach((i)=>{
+                
+                if (i%2){
+                    ar2.push(i*2)
+                    console.log(i*2)}
+                else{
+                    ar2.push(i*3)
+                    console.log(i*3)
+                }
+                
+            })
+            console.log(ar2)
+
+
+function getCount(objects) {
+        let count=0;
+    objects.forEach((i)=>{   
+        if (i[0]===i[1]){
+        count++;
+        }    
+    });
+return count;
+}
+    objects=[[1,1],[2,3],[3,3],[3,4],[4,5]]
+    console.log("this is :" + getCount(objects));
+
+
+
+
+
+
+            
+
+            document.addEventListener("DOMContentLoaded",function(){
+                const btn = document.createElement("button")
+                btn.id='btn'
+                btn.innerHTML=0
+                // let c=0;
+                // document.createElement
+                // document.querySelector('#btn').onclick=btn.innerHTML+1; 
+               document.body.appendChild(btn)
+               btn.onclick= ()=>{
+                   btn.innerHTML++
+               }
+                
+                // document.querySelector("h1").innerHTML=c
+            })
+
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>
+                <!-- <button id = 'btn' font-size='24px'>  0 </button> -->
+            </h1>
+            
+        </div>
+   
+    </body>
+</html>

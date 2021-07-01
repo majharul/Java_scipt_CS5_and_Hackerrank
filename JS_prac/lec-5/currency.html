@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Currency Exchange API</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded',function(){
+                fetch('https://freegeoip.app/json/')
+                .then(Response.json)
+                .then(data=>{
+                    console.log(data)
+
+                    let rate= data.url
+                    console.log(rate)
+                    try{
+                    document.querySelector('h1').innerHTML=rate
+                    }
+                    finally
+                    {
+                        let rate= data.redirected
+                        document.querySelector('h1').innerHTML=rate
+                        document.querySelector('h1').innerHTML=`there is a subscription issue at ${data.url}`
+                        var a= 4
+                        var b=a++
+                        document.querySelector('h1').innerHTML=`"a is ${a} and b is ${b}"`
+                        
+                    }
+                    
+                })
+                .catch(error=> {
+                    console.log(error)
+                });
+
+                
+            })
+        </script>
+    </head>
+    <body>
+        <h1>
+            
+        </h1>
+    </body>
+
+</html>
