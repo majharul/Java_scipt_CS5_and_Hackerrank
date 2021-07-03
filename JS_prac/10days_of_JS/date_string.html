@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Container Div</title>
+        <style>
+            /* Style for the 'buttonContainer' class */
+           
+
+        </style>
+        <link rel="stylesheet" href="css/buttonsGrid.css">
+        <!-- <link rel="stylesheet" href="js/buttonsGrid.js"> -->
+        <script src="js/buttonsGrid.js">
+            
+            
+
+
+            
+             
+        </script>
+    </head>
+    <body>
+
+        <h1 id='day'>0</h1>
+        <!-- <h1>Container Div </h1> -->
+        <div id="btns" class="buttonContainer">
+            <button id="btn1" class="buttonClass">1</button>
+            <button id="btn2" class="buttonClass">2</button>
+            <button id="btn3" class="buttonClass">3</button>
+            <button id="btn4" class="buttonClass">4</button>
+            <button id="btn5" class="buttonClass">5</button>
+            <button id="btn6" class="buttonClass">6</button>
+            <button id="btn7" class="buttonClass">7</button>
+            <button id="btn8" class="buttonClass">8</button>
+            <button id="btn9" class="buttonClass">9</button>
+            <script>
+            let x;
+            // x=new Date()
+            let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            x=new Date()
+            // let day =x;
+            console.log(x.getDay())
+            console.log("hello "+ days[x.getDay()])
+            bt=document.createElement('h1').innerHTML=days[x.getDay()];
+            
+            document.getElementById('day').innerHTML= days[x.getDay()];
+             </script>
+        </div>
+        
+    </body>
+</html>

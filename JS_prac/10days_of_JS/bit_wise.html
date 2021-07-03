@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+        <title>Container Div</title>
+             
+       
+    </head>
+    <body>
+
+        <h1 id='day'>0</h1>
+        <!-- <h1>Container Div </h1> -->
+        <div id="btns" class="buttonContainer">
+            
+            <script>
+            let x;
+            // x=new Date()
+            let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            x=new Date()
+            // let day =x;
+            console.log(x.getDay())
+            console.log("hello "+ days[x.getDay()])
+            bt=document.createElement('h1').innerHTML=days[x.getDay()];
+            
+            document.getElementById('day').innerHTML= days[x.getDay()];
+             </script>
+        </div>
+        
+        <script>
+            function  getMaxLessThanK(n, k){
+               let re=new RegExp( /^(Mr|Mrs|Ms|Dr|Er)(\.)([a-zA-Z])*$/)
+            let max_value = 0;
+            for ( var i = 1 ;i < n ;i++){
+                for (var j = i+1 ; j < n+1; j++){
+                    if ( Number(i & j) < k){  // This line
+                        if(Number(i & j) > max_value){ // And this line
+                    max_value = i & j;
+                }
+            }
+        }
+    }
+    return max_value;
+};
+                
+               
+           
+            // let [n,k]= [9,2]
+            console.log(getMaxLessThanK(9 ,2))
+
+
+        </script>
+
+    </body>
+</html>
